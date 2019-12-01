@@ -19,9 +19,8 @@ namespace Swagger.Common
         public int timeout;
         /// <summary>数据库链接</summary>
         public SqlConnection Connection;
-        /// <summary>是否记录慢查询</summary>
-        private static bool isRecordSlowQuery;
-
+        
+         
 
         /// <summary>构造函数,打开数据库链接</summary>
         /// <param name="ConnectionString">数据库链接字符串</param>
@@ -191,6 +190,7 @@ namespace Swagger.Common
         /// <summary>执行存储过程,不返回rows</summary>
         /// <param name="ProcedureName">过程名</param>
         /// <param name="parameters">参数名</param>
+        /// <param name="errormsg"></param>
         public bool execute_procedure_stone(
           string ProcedureName,
           SqlParameter[] parameters,
