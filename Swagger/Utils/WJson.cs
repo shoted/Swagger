@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 
-namespace Swagger.Common
+namespace Swagger.Utils
 {
     public class WJson
     {
@@ -42,7 +42,7 @@ namespace Swagger.Common
             }
         }
 
-        public void SetValues(bool isSuccess, HttpStatusCode code, string message)
+        public void SetValue(bool isSuccess, HttpStatusCode code, string message)
         {
             IsSuccess = isSuccess;
             Code = (int)code;
