@@ -9,13 +9,14 @@ using Swagger.Utils;
 
 namespace Swagger.Controllers
 {
-    /// <summary>
-    /// 获取宝箱
-    /// </summary>
+  
     [ApiController]
     [Route("treasure")]
     public class Treasure : TemplatePage
     {
+        /// <summary>
+        /// 获取宝箱
+        /// </summary>
         [HttpGet]
         public void Get()
         {

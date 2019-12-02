@@ -37,7 +37,7 @@ namespace Swagger.Common
                 memoryStream.Close();
                 return stringBuilder.ToString();
             }
-            catch (Exception ex)
+            catch 
             {
                 return string.Empty;
             }

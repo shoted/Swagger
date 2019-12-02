@@ -3,6 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
+using static System.TimeZone;
 
 namespace Swagger.Common
 {
@@ -193,7 +194,7 @@ namespace Swagger.Common
 
         public static DateTime convertFromTimeMillis(long ms)
         {
-            return TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1)).AddMilliseconds((double)ms);
+            return TimeZoneInfo.ConvertTime(new DateTime(1970, 1, 1), TimeZoneInfo.Local).AddMilliseconds(ms);
         }
 
         public static string ConvertStoneToString(long stone)
