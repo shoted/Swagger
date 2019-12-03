@@ -1,33 +1,35 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Swagger.Common;
+using Swagger.Data.Ado;
+using Swagger.Data.View;
 using Swagger.Utils;
 
 namespace Swagger.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class BlessingWall : TemplateController
+    public class BlessingWall : TemplatePage
     {
-
+        
+        /// <summary>
+        /// 获取祝福墙
+        /// </summary>
         [HttpGet]
-        public void Get(int page = 1, int pageSize = 10)
+        protected  void Get()
         {
-            string key = "key";
-            if (!CCache.Exists(key))
-            {
-                CCache.SetCache(key, DateTime.Now, 10);
-            }
-
-            var date = Convert.ToDateTime(CCache.GetCache(key));
-            WJson.AddDataItem("date", date);
-            WJson.AddDataItem("now",DateTime.Now);
+            
         }
 
+        /// <summary>
+        /// 发送祝福
+        /// </summary>
         [HttpPost]
-        public void Post()
+        protected  void Post()
         {
-
+            
         }
     }
 }

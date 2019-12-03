@@ -35,7 +35,7 @@ namespace Swagger.Common
 
         public static object GetCache(string key)
         {
-            _cache.TryGetValue(key, out object value);
+            _cache.TryGetValue(key, out var value);
             return value;
         }
 

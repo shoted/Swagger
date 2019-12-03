@@ -8,7 +8,7 @@ using Swagger.Common;
 
 namespace Swagger.Utils
 {
-    public abstract class TemplateController : Controller
+    public abstract class TemplatePage : Controller
     {
         protected int UserId
         {
