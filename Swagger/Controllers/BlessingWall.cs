@@ -10,7 +10,7 @@ using Swagger.Utils;
 namespace Swagger.Controllers
 {
     [ApiController]
-    [Route("BlessingWall")]
+    [Route("[controller]")]
     public class BlessingWall : TemplatePage
     {
 
