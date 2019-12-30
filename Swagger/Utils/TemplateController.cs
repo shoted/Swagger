@@ -21,6 +21,8 @@ namespace Swagger.Utils
 
         protected WJson WJson = new WJson();
 
+        public abstract void Get();
+        public abstract void Post();
 
         public override void OnActionExecuting(ActionExecutingContext context)
         {

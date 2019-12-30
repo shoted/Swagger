@@ -10,28 +10,24 @@ using Swagger.Utils;
 namespace Swagger.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class BlessingWall : TemplatePage
+    [Route("images")]
+    public class CDatabaseController : TemplatePage
     {
 
         /// <summary>
         /// 获取祝福墙
         /// </summary>
         [HttpGet]
-        public void Get()
+        public override void Get()
         {
-            string key = "key";
-            CCache.SetCache(key, DateTime.Now, 10);
-            WJson.AddDataItem("now", CCache.GetCache(key));
         }
 
         /// <summary>
         /// 发送祝福
         /// </summary>
         [HttpPost]
-        public void Post()
-        {
-
+        public override void Post()
+        { 
         }
     }
 }
