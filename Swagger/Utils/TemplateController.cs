@@ -28,7 +28,7 @@ namespace Swagger.Utils
         {
             Response.Headers.Clear();
             Response.Headers.Add("Access-Control-Allow-Origin", "*");
-            Response.Headers.Add("Access-Control-Allow-Methods", "POST");
+            Response.Headers.Add("Access-Control-Allow-Methods", "GET,POST");
             Response.Headers.Add("Access-Control-Max-Age", "2000");
         }
 

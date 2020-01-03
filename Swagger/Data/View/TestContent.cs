@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Swagger.Data.View
 {
-    public class BlessingWallInfo
+    public class TestContent
     {
         #region 公共属性
 

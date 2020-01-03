@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using Swagger.Data.View;
@@ -24,7 +20,7 @@ namespace Swagger.Controllers
         [HttpGet]
         public override void Get()
         {
-            var data = _dbConnection.Query<BlessingWallInfo>("select * from t_blessing_wall");
+            var data = _dbConnection.Query<TestContent>("select * from t_blessing_wall");
 
             WJson.AddDataItem("data", data);
             WJson.AddDataItem("state",_dbConnection.State);
